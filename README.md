@@ -1,4 +1,3 @@
-# CodeSample
 using System;
 using System.IO;
 using System.Linq;
@@ -20,7 +19,6 @@ namespace SmartSms.Controllers
             return View();
         }
 
-        //http://localhost:6372/Transact/BeelineSms?idClient=1&idCampaign=1&password=3151020&uid=bfbcde5b-7189-4044-b87d-aeeab320b288&rnd=qqq
         public ActionResult BeelineSms(int idClient, int idCampaign, string password, string uid, string rnd,
             string refURL = "")
         {
@@ -119,7 +117,6 @@ namespace SmartSms.Controllers
             }
         }
 
-        //http://websmsmassmess.azurewebsites.net/Transact/DirectSms?idClient=2&idCampaign=3&password=LjvLtymub&number=79652313950
         public ActionResult DirectSMS(int idClient, int idCampaign, string password, long number)
         {
             try
@@ -180,8 +177,7 @@ namespace SmartSms.Controllers
             }
         }
 
-        //http://localhost:6372/Transact/CancellSms?idCampaign=1&password=3151020&uid=bfbcde5b-7189-4044-b87d-aeeab320b288&rnd=qqq
-        public ActionResult CancellSms(int idClient, int idCampaign, string password, string uid, string rnd)
+       public ActionResult CancellSms(int idClient, int idCampaign, string password, string uid, string rnd)
         {
             try
             {
@@ -245,11 +241,6 @@ namespace SmartSms.Controllers
                 return Content("Unexpected Error");
             }
         }
-
-        //public ActionResult GetSMS(int idClient, int idCampaign, string number)
-        //{
-        //    return Content("Ok");
-        //}
 
         public string SendSMS(string url, long idClient, long idCampaign, long number)
         {
